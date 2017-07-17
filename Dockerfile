@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y -t unstable \
     rm -f version.txt ss-latest.deb && \
     R -e "install.packages(c('shiny', 'rmarkdown'), repos='https://cran.rstudio.com/')" && \
     # install my own required packages
-    R -e "install.packages(c('vegan', 'dplyr', 'foreach', 'reshape2', 'httr'), 'jsonlite', repos='https://cran.rstudio.com/')" && \
+    R -e "install.packages(c('vegan', 'dplyr', 'foreach', 'reshape2', 'httr', 'jsonlite'), repos='https://cran.rstudio.com/')" && \
     cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/ && \
     rm -rf /var/lib/apt/lists/*
 
